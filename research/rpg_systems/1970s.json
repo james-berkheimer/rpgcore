@@ -1,0 +1,456 @@
+{
+  "schema_version": 1,
+  "decade": "1970s",
+  "systems": [
+    {
+      "id": "dungeons-and-dragons",
+      "name": "Dungeons & Dragons",
+      "publisher": "TSR",
+      "country": "US",
+      "language": "en",
+      "system_family_hint": "dnd",
+      "genre": [
+        "fantasy"
+      ],
+      "notes": null,
+      "sources": [
+        {
+          "type": "wikipedia",
+          "citation": "https://en.wikipedia.org/wiki/Dungeons_%26_Dragons"
+        },
+        {
+          "type": "wikipedia",
+          "citation": "https://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons"
+        }
+      ],
+      "editions": [
+        {
+          "id": "odnd-1974",
+          "name": "Original Dungeons & Dragons",
+          "edition_label": "OD&D",
+          "first_published_year": 1974,
+          "availability": {
+            "status": "unknown",
+            "notes": null
+          },
+          "license_status": "proprietary",
+          "sources": [
+            {
+              "type": "wikipedia",
+              "citation": "https://en.wikipedia.org/wiki/Dungeons_%26_Dragons_(1974)"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "basic-1977",
+          "name": "Dungeons & Dragons Basic Set",
+          "edition_label": "Basic D&D",
+          "first_published_year": 1977,
+          "availability": {
+            "status": "unknown",
+            "notes": null
+          },
+          "license_status": "proprietary",
+          "sources": [
+            {
+              "type": "wikipedia",
+              "citation": "https://en.wikipedia.org/wiki/Dungeons_%26_Dragons_Basic_Set"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "adnd-1977",
+          "name": "Advanced Dungeons & Dragons",
+          "edition_label": "AD&D",
+          "first_published_year": 1977,
+          "availability": {
+            "status": "unknown",
+            "notes": null
+          },
+          "license_status": "proprietary",
+          "sources": [
+            {
+              "type": "wikipedia",
+              "citation": "https://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "adnd-2e-1989",
+          "name": "Advanced Dungeons & Dragons",
+          "edition_label": "AD&D 2nd Edition",
+          "first_published_year": 1989,
+          "availability": {
+            "status": "unknown",
+            "notes": null
+          },
+          "license_status": "proprietary",
+          "sources": [
+            {
+              "type": "wikipedia",
+              "citation": "https://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "dnd-3e-2000",
+          "name": "Dungeons & Dragons",
+          "edition_label": "3rd Edition",
+          "first_published_year": 2000,
+          "availability": {
+            "status": "unknown",
+            "notes": null
+          },
+          "license_status": "proprietary",
+          "sources": [
+            {
+              "type": "wikipedia",
+              "citation": "https://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "dnd-4e-2008",
+          "name": "Dungeons & Dragons",
+          "edition_label": "4th Edition",
+          "first_published_year": 2008,
+          "availability": {
+            "status": "unknown",
+            "notes": null
+          },
+          "license_status": "proprietary",
+          "sources": [
+            {
+              "type": "wikipedia",
+              "citation": "https://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons"
+            }
+          ],
+          "notes": null
+        },
+        {
+          "id": "dnd-5e-2014",
+          "name": "Dungeons & Dragons",
+          "edition_label": "5th Edition",
+          "first_published_year": 2014,
+          "availability": {
+            "status": "unknown",
+            "notes": null
+          },
+          "license_status": "proprietary",
+          "sources": [
+            {
+              "type": "wikipedia",
+              "citation": "https://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons"
+            }
+          ],
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "empire-of-the-petal-throne",
+      "name": "Empire of the Petal Throne",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "traveller",
+      "name": "Traveller",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "chivalry-and-sorcery",
+      "name": "Chivalry & Sorcery",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "tunnels-and-trolls",
+      "name": "Tunnels & Trolls",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "runequest",
+      "name": "RuneQuest",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "gamma-world",
+      "name": "Gamma World",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "bushido",
+      "name": "Bushido",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "metamorphosis-alpha",
+      "name": "Metamorphosis Alpha",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "boot-hill",
+      "name": "Boot Hill",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "superhero-2044",
+      "name": "Superhero 2044",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "villains-and-vigilantes",
+      "name": "Villains and Vigilantes",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "aftermath",
+      "name": "Aftermath!",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "bunnies-and-burrows",
+      "name": "Bunnies & Burrows",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "en-garde",
+      "name": "En Garde!",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "melee-wizard-the-fantasy-trip",
+      "name": "Melee / Wizard (The Fantasy Trip)",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "space-opera",
+      "name": "Space Opera",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "thieves-world",
+      "name": "Thieves' World",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "dragonquest",
+      "name": "DragonQuest",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "arduin-grimoire",
+      "name": "Arduin Grimoire",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "the-morrow-project",
+      "name": "The Morrow Project",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "starfaring",
+      "name": "Starfaring",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "original-braunstein",
+      "name": "Original Braunstein",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "warlock",
+      "name": "Warlock",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "sorcerer",
+      "name": "Sorcerer",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    },
+    {
+      "id": "dallas-the-television-role-playing-game",
+      "name": "Dallas: The Television Role-Playing Game",
+      "publisher": null,
+      "country": "unknown",
+      "language": "en",
+      "system_family_hint": null,
+      "genre": [],
+      "notes": null,
+      "sources": [],
+      "editions": []
+    }
+  ]
+}
