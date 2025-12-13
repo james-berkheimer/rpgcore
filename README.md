@@ -1,51 +1,55 @@
 # RPGCore
 
-RPGCore is a system-agnostic core framework for representing tabletop role-playing game
-(RPG) systems in a structured, extensible, and historically accurate way.
+RPGCore is a system-agnostic foundation for working with tabletop role-playing game
+(RPG) systems in code.
 
-The project treats each RPG system as a first-class entity, with explicit modeling of
-editions and lineage. This data-first foundation is intended to support later
-decomposition of mechanics and eventual use of RPG systems as modular plugins in
-software engines.
+The idea is simple: treat each RPG system as its own thing, model its editions
+explicitly, and build everything on top of that solid data. Over time, those systems
+can be broken down into shared mechanics and eventually used as plugins inside
+game engines or other tools.
 
-Initial development is Python-first to prioritize clarity, correctness, and rapid
-iteration.
-
----
-
-## Project Goals
-
-- Create a canonical, version-controlled database of tabletop RPG systems
-- Model RPG systems and their editions explicitly and historically
-- Establish common structural abstractions across disparate RPG systems
-- Enable future implementation of systems as pluggable rule modules
-- Remain engine-agnostic and system-agnostic
+Development starts in Python so it’s easy to experiment and iterate. If performance
+ever becomes a problem, parts of the project may later be rewritten in a compiled
+language like Rust.
 
 ---
 
-## Non-Goals
+## What RPGCore Is Trying To Do
 
-- RPGCore is not a game engine
-- RPGCore is not a content or character generator
-- RPGCore does not include copyrighted game text
-- RPGCore does not attempt to simulate or balance gameplay at this stage
+- Build a clean, structured database of tabletop RPG systems
+- Track editions and history accurately instead of flattening everything
+- Find the common building blocks shared across different RPG systems
+- Make it possible to implement systems as modular, pluggable rule sets
+- Stay engine-agnostic and system-agnostic
 
 ---
 
-## Current Phase: Research & Data Modeling
+## What RPGCore Is Not
 
-RPGCore is currently in a **research and normalization phase**.
-The focus is on compiling a reliable database of existing RPG systems and editions
-before attempting to formalize mechanical abstractions.
+- Not a game engine
+- Not a character builder or content generator
+- Not tied to any single RPG system or license
+- Not a source of copyrighted game text
+
+---
+
+## Current Focus: Research First
+
+Right now RPGCore is in a research and data-modeling phase.
+
+Before trying to simulate mechanics or write rules engines, the goal is to first build
+a reliable, historically accurate catalog of existing RPG systems and their editions.
 
 ### Research Scope
 
-- Decade-by-decade approach, starting with the **1970s**
-- English-language tabletop RPGs (US / UK / Canada)
-- Includes both major and obscure systems
-- Inclusion requires published rules (availability tracked separately)
+- Work decade by decade, starting with the 1970s
+- English-language tabletop RPGs (US, UK, Canada)
+- Includes both well-known and obscure systems
+- Systems must have published rules (availability is tracked separately)
 
-### Repository Structure
+---
+
+## Repository Layout
 
 ```text
 rpgcore/
@@ -57,46 +61,47 @@ rpgcore/
         └── candidates_1970s.txt
 ```
 
-- `candidates_1970s.txt`
-  A staging list of candidate systems identified for the decade.
-- `1970s.json`
-  Normalized, structured data following the RPGCore schema.
+- candidates_1970s.txt
+  A working list of RPG systems being considered for the decade.
+
+- 1970s.json
+  Normalized data following the current RPGCore schema.
 
 ---
 
-## Data Model (Schema v1)
+## Data Model (v1)
 
 - One JSON file per decade
-- Each file contains **systems**, not flat editions
-- Each system contains:
-  - Metadata (name, publisher, country, genre, sources)
-  - A list of **editions**, each with:
-    - Stable ID
-    - Display name and edition label
+- Each file contains systems, not loose editions
+- Each system includes:
+  - Basic metadata (name, publisher, country, genre, sources)
+  - A list of editions, each with:
+    - A stable ID
+    - Display name / edition label
     - First publication year
-    - Availability status
-    - License status
-    - Sources and notes
+    - Availability info
+    - License info
+    - Notes and sources
 
-This structure avoids duplication, preserves historical lineage, and maps cleanly to
-future plugin-based implementations.
+This keeps history intact, avoids duplication, and lines up with the eventual
+plugin-style architecture.
 
-### Edition Boundary Rules
+### How Edition Boundaries Work
 
-- Edition boundaries follow **publisher-recognized, formally released core rulesets**
-- Parallel branches are separate editions (e.g., Basic D&D vs AD&D)
-- Minor revisions, reprints, or retrospective labels do not create new editions
-- For *Dungeons & Dragons*, the Wikipedia “Editions of Dungeons & Dragons” page is used
-  as the authoritative guide
+- Editions follow publisher-recognized core rule releases
+- Parallel branches count as separate editions (e.g. Basic D&D vs AD&D)
+- Minor revisions, reprints, or later renaming don’t create new editions
+- For Dungeons & Dragons, the Wikipedia “Editions of Dungeons & Dragons” page is used
+  as the reference
 
 ---
 
 ## Current Progress
 
-- Research framework established
+- Research structure in place
 - Schema v1 stabilized
-- 1970s candidate list compiled
-- **Dungeons & Dragons** fully normalized across its historical editions:
+- Initial 1970s candidate list compiled
+- Dungeons & Dragons fully normalized across its editions:
   - OD&D (1974)
   - Basic D&D (1977)
   - AD&D (1977)
@@ -105,21 +110,12 @@ future plugin-based implementations.
   - D&D 4th Edition (2008)
   - D&D 5th Edition (2014)
 
-Naming reflects contemporaneous usage, not later retrospective terminology.
-
----
-
-## Process Discipline
-
-- One change at a time
-- No inferred naming or assumptions
-- Explicit confirmation before schema or naming changes
-- Data validity verified via scripts
+Naming reflects what the games were actually called at the time, not later
+retrospective labels.
 
 ---
 
 ## Status
 
-Active development — research and normalization ongoing.
-
-Next step: normalize the next 1970s RPG system.
+Active development.
+Current work: normalizing the next RPG system from the 1970s.
