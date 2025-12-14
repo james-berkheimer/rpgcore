@@ -1,7 +1,3 @@
-========================
-core_models/entities.md
-========================
-
 # Entities
 
 Entities represent living or acting agents within a game system.

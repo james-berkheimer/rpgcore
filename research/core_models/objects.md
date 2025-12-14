@@ -1,7 +1,3 @@
-========================
-core_models/objects.md
-========================
-
 # Objects
 
 Objects represent non-living items or constructs that entities can interact with.

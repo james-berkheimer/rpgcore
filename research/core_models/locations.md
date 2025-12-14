@@ -1,7 +1,3 @@
-========================
-core_models/locations.md
-========================
-
 # Locations
 
 Locations describe spatial or positional concepts that are mechanically relevant.

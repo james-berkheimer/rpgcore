@@ -1,7 +1,3 @@
-========================
-core_models/resolution.md
-========================
-
 # Resolution
 
 Resolution describes how the game determines outcomes when uncertainty or conflict exists.
