@@ -1,0 +1,19 @@
+{
+  "parent": "dungeons_and_dragons",
+  "id": "dnd_4e_2008",
+  "name": "Dungeons & Dragons",
+  "edition_label": "4th Edition",
+  "first_published_year": 2008,
+  "availability": {
+    "status": "unknown",
+    "notes": null
+  },
+  "license_status": "proprietary",
+  "sources": [
+    {
+      "type": "wikipedia",
+      "citation": "https://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons"
+    }
+  ],
+  "notes": null
+}

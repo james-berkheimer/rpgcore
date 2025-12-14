@@ -1,0 +1,19 @@
+{
+  "parent": "dungeons_and_dragons",
+  "id": "dnd_3e_2000",
+  "name": "Dungeons & Dragons",
+  "edition_label": "3rd Edition",
+  "first_published_year": 2000,
+  "availability": {
+    "status": "unknown",
+    "notes": null
+  },
+  "license_status": "proprietary",
+  "sources": [
+    {
+      "type": "wikipedia",
+      "citation": "https://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons"
+    }
+  ],
+  "notes": null
+}

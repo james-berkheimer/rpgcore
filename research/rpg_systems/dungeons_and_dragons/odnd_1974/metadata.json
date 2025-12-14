@@ -1,0 +1,19 @@
+{
+  "parent": "dungeons_and_dragons",
+  "id": "odnd_1974",
+  "name": "Original Dungeons & Dragons",
+  "edition_label": "OD&D",
+  "first_published_year": 1974,
+  "availability": {
+    "status": "unknown",
+    "notes": null
+  },
+  "license_status": "proprietary",
+  "sources": [
+    {
+      "type": "wikipedia",
+      "citation": "https://en.wikipedia.org/wiki/Dungeons_%26_Dragons_(1974)"
+    }
+  ],
+  "notes": null
+}

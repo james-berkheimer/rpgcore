@@ -1,0 +1,26 @@
+{
+  "system_id": "dungeons_and_dragons",
+  "name": "Dungeons & Dragons",
+  "origin": {
+    "publishers": ["TSR", "Wizards of the Coast"],
+    "country": "US",
+    "first_published_year": 1974
+    },
+  "language": "en",
+  "genre": [
+    "fantasy"
+  ],
+  "sources": [
+    {
+      "type": "wikipedia",
+      "citation": "https://en.wikipedia.org/wiki/Dungeons_%26_Dragons"
+    },
+    {
+      "type": "wikipedia",
+      "citation": "https://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons"
+    }
+  ]
+}
+
+
+

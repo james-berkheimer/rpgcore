@@ -1,0 +1,19 @@
+{
+  "parent": "dungeons_and_dragons",
+  "id": "basic_1977",
+  "name": "Dungeons & Dragons Basic Set",
+  "edition_label": "Basic D&D",
+  "first_published_year": 1977,
+  "availability": {
+    "status": "unknown",
+    "notes": null
+  },
+  "license_status": "proprietary",
+  "sources": [
+    {
+      "type": "wikipedia",
+      "citation": "https://en.wikipedia.org/wiki/Dungeons_%26_Dragons_Basic_Set"
+    }
+  ],
+  "notes": null
+}

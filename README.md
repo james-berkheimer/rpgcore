@@ -1,51 +1,107 @@
 # RPGCore
 
-RPGCore is a system-agnostic foundation for working with tabletop role-playing game
-(RPG) systems in code.
+RPGCore is a research-focused project aimed at identifying and documenting the common mechanical building blocks shared by tabletop role-playing game (RPG) systems.
 
-The idea is simple: treat each RPG system as its own thing, model its editions
-explicitly, and build everything on top of that solid data. Over time, those systems
-can be broken down into shared mechanics and eventually used as plugins inside
-game engines or other tools.
+The project treats each RPG system—and each of its editions—as distinct objects of study. Rather than attempting to implement rules or simulate gameplay, RPGCore records *which kinds of mechanics exist* in each system so they can later be compared, distilled, and abstracted into a generic, system-agnostic model.
 
-Development starts in Python so it’s easy to experiment and iterate. If performance
-ever becomes a problem, parts of the project may later be rewritten in a compiled
-language like Rust.
+This work is intentionally exploratory and descriptive.
 
 ---
 
 ## What RPGCore Is Trying To Do
 
-- Build a clean, structured database of tabletop RPG systems
-- Track editions and history accurately instead of flattening everything
-- Find the common building blocks shared across different RPG systems
-- Make it possible to implement systems as modular, pluggable rule sets
-- Stay engine-agnostic and system-agnostic
+- Build a structured research corpus of tabletop RPG systems and their editions
+- Document *what mechanics exist*, not how they are implemented
+- Classify mechanics into a small set of shared conceptual models
+- Identify patterns and common ground across very different RPG systems
+- Create a foundation for a future generic mechanics model
 
 ---
 
 ## What RPGCore Is Not
 
 - Not a game engine
-- Not a character builder or content generator
-- Not tied to any single RPG system or license
-- Not a source of copyrighted game text
+- Not an executable rules system
+- Not a character builder
+- Not a balance simulator
+- Not a repository of copyrighted rules text
+- Not defining a final schema or standard (yet)
 
 ---
 
-## Current Focus: Research First
+## Research-First Philosophy
 
-Right now RPGCore is in a research and data-modeling phase.
+RPGCore deliberately separates **research** from **implementation**.
 
-Before trying to simulate mechanics or write rules engines, the goal is to first build
-a reliable, historically accurate catalog of existing RPG systems and their editions.
+At this stage:
 
-### Research Scope
+- Ambiguity is allowed and expected
+- Over-modeling is avoided
+- Features are recorded at a high level
+- Details such as numbers, formulas, dice math, or exact rule text are out of scope
 
-- Work decade by decade, starting with the 1970s
-- English-language tabletop RPGs (US, UK, Canada)
-- Includes both well-known and obscure systems
-- Systems must have published rules (availability is tracked separately)
+The guiding question is always:
+
+> *Does this mechanic exist in the system at all?*
+
+Not:
+
+> *How exactly does it work?*
+
+---
+
+## Core Mechanics Models (Locked)
+
+All observed mechanics are classified into one of four core conceptual models:
+
+1. **Entities**
+   Living or acting agents in the game (characters, creatures, etc.)
+2. **Objects**
+   Non-living items or resources that entities interact with
+3. **Locations**
+   Spatial or positional concepts that are mechanically relevant
+4. **Resolution**
+   How outcomes are determined (randomness, tables, comparisons, etc.)
+
+If a mechanic does not clearly fit into one of these models, it is recorded under:
+
+- **unknown**
+
+These models are **conceptual buckets**, not schemas.
+
+---
+
+## How Mechanics Are Documented
+
+Each *edition* of a game system has a single `mechanics.json` file.
+
+That file always has the same top-level structure:
+
+```json
+{
+  "entities": [],
+  "objects": [],
+  "locations": [],
+  "resolution": [],
+  "unknown": []
+}
+```
+
+**Rules:**
+
+- Values are arrays of strings only
+- Strings indicate the *presence* of a mechanic
+- No nesting, no booleans, no prose
+- Synonyms and duplicates are allowed
+- Normalization happens later
+
+**Example features:**
+
+- `attributes`
+- `skills`
+- `hit_points`
+- `random_resolution`
+- `tables`
 
 ---
 
@@ -56,66 +112,64 @@ rpgcore/
 ├── LICENSE
 ├── README.md
 └── research/
+    ├── core_models/
+    │   ├── entities.md
+    │   ├── objects.md
+    │   ├── locations.md
+    │   └── resolution.md
+    ├── notes/
+    │   └── (historical lists and scratch data)
     └── rpg_systems/
-        ├── 1970s.json
-        └── candidates_1970s.txt
+        └── <system_id>/
+            ├── metadata.json
+            └── <edition_id>/
+                ├── metadata.json
+                └── mechanics.json
 ```
 
-- candidates_1970s.txt
-  A working list of RPG systems being considered for the decade.
+### Key principles
 
-- 1970s.json
-  Normalized data following the current RPGCore schema.
-
----
-
-## Data Model (v1)
-
-- One JSON file per decade
-- Each file contains systems, not loose editions
-- Each system includes:
-  - Basic metadata (name, publisher, country, genre, sources)
-  - A list of editions, each with:
-    - A stable ID
-    - Display name / edition label
-    - First publication year
-    - Availability info
-    - License info
-    - Notes and sources
-
-This keeps history intact, avoids duplication, and lines up with the eventual
-plugin-style architecture.
-
-### How Edition Boundaries Work
-
-- Editions follow publisher-recognized core rule releases
-- Parallel branches count as separate editions (e.g. Basic D&D vs AD&D)
-- Minor revisions, reprints, or later renaming don’t create new editions
-- For Dungeons & Dragons, the Wikipedia “Editions of Dungeons & Dragons” page is used
-  as the reference
+- One folder per **system lineage**
+- One subfolder per **edition**
+- Folder names are canonical IDs
+- No decade-based organization in authoritative data
+- All data under `research/` is provisional and research-oriented
 
 ---
 
-## Current Progress
+## Metadata vs Mechanics
 
-- Research structure in place
-- Schema v1 stabilized
-- Initial 1970s candidate list compiled
-- Dungeons & Dragons fully normalized across its editions:
-  - OD&D (1974)
-  - Basic D&D (1977)
-  - AD&D (1977)
-  - AD&D 2nd Edition (1989)
-  - D&D 3rd Edition (2000)
-  - D&D 4th Edition (2008)
-  - D&D 5th Edition (2014)
+### System-level `metadata.json`
 
-Naming reflects what the games were actually called at the time, not later
-retrospective labels.
+- Describes the overall system lineage
+- Includes publishers, origin, genre, language, sources
+- Does **not** list editions
+- Does **not** include mechanics
+
+### Edition-level `metadata.json`
+
+- Describes a single mechanically distinct ruleset
+- Includes edition label, publication year, availability, sources
+- Does **not** include mechanics
+- Does **not** duplicate system-level data
 
 ---
 
-## Status
+## Current Status
 
-Active development.
-Current work: normalizing the next RPG system from the 1970s.
+- Research structure established
+- Core mechanics models defined and documented
+- Mechanics classification approach locked
+- Dungeons & Dragons set up as the reference system
+- Edition metadata structure finalized
+- Mechanics documentation beginning edition by edition
+
+Current work is focused on **documenting mechanics features**, not expanding the system list aggressively.
+
+---
+
+## License
+
+This repository contains original research structure and metadata only.
+It does not include copyrighted game text or proprietary rule descriptions.
+Please see the LICENSE file for details.
