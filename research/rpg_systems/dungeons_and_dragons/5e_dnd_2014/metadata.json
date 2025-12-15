@@ -1,9 +1,9 @@
 {
   "parent": "dungeons_and_dragons",
-  "id": "dnd_4e_2008",
+  "id": "5e_dnd_2014",
   "name": "Dungeons & Dragons",
-  "edition_label": "4th Edition",
-  "first_published_year": 2008,
+  "edition_label": "5th Edition",
+  "first_published_year": 2014,
   "availability": {
     "status": "unknown",
     "notes": null

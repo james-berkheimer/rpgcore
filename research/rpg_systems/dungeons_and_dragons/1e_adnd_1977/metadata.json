@@ -1,9 +1,9 @@
 {
   "parent": "dungeons_and_dragons",
-  "id": "adnd_2e_1989",
+  "id": "1e_adnd_1977",
   "name": "Advanced Dungeons & Dragons",
-  "edition_label": "AD&D 2nd Edition",
-  "first_published_year": 1989,
+  "edition_label": "Basic D&D",
+  "first_published_year": 1977,
   "availability": {
     "status": "unknown",
     "notes": null
@@ -12,7 +12,7 @@
   "sources": [
     {
       "type": "wikipedia",
-      "citation": "https://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons"
+      "citation": "https://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons#Advanced_Dungeons_&_Dragons"
     }
   ],
   "notes": null

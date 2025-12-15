@@ -1,9 +1,9 @@
 {
   "parent": "dungeons_and_dragons",
-  "id": "dnd_5e_2014",
-  "name": "Dungeons & Dragons",
-  "edition_label": "5th Edition",
-  "first_published_year": 2014,
+  "id": "1e_dnd_1977",
+  "name": "Dungeons & Dragons Basic Set",
+  "edition_label": "Basic D&D",
+  "first_published_year": 1977,
   "availability": {
     "status": "unknown",
     "notes": null
@@ -12,7 +12,7 @@
   "sources": [
     {
       "type": "wikipedia",
-      "citation": "https://en.wikipedia.org/wiki/Editions_of_Dungeons_%26_Dragons"
+      "citation": "https://en.wikipedia.org/wiki/Dungeons_%26_Dragons_Basic_Set"
     }
   ],
   "notes": null
