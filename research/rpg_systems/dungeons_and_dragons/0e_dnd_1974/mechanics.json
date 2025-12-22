@@ -1,5 +1,107 @@
 {
-  "entities": [],
+  "entities": {
+    "character": {
+      "type": {
+        "monster": {
+          "armor_class": "<int>",
+          "attack_type": ["<string>"],
+          "hit_dice": "<int>",
+          "in_lair": "<boolean | percentage>",
+          "intelligence": "<category>",
+          "monster_type": "<string>",
+          "moves_in_inches": ["<walk_int>,<fly_int>"],
+          "number_appearing": "<int>",
+          "special_abilities": ["<string>"],
+          "treasure_type": ["<A-I>"]
+        },
+        "non_player_character": {
+          "abilities": [
+            "constitution",
+            "dexterity",
+            "intelligence",
+            "strength",
+            "wisdom",
+            "charisma"
+          ],
+          "alignment": [
+            "chaos",
+            "law",
+            "neutrality"
+          ],
+          "armor_class": "<int>",
+          "class": [
+            "cleric",
+            "fighting_man",
+            "magic_user"
+          ],
+          "equipment": [],
+          "experience_points": "<int>",
+          "gold": "<int>",
+          "hit_dice": "<int>",
+          "hit_points": "<int>",
+          "language": {
+            "language_limit": "<int>",
+            "language_list": [
+              "alignment_language",
+              "common_tongue",
+              "creature_languages"
+            ]
+          },
+          "loyalty": "<int>",
+          "morale": "<int>",
+          "movement_rate": "<int>",
+          "race": [
+            "dwarf",
+            "elf",
+            "halfling",
+            "human"
+          ],
+          "saving_throws": "<int | table-ref>"
+        },
+        "player_character": {
+          "abilities": [
+            "constitution",
+            "dexterity",
+            "intelligence",
+            "strength",
+            "wisdom",
+            "charisma"
+          ],
+          "alignment": [
+            "chaos",
+            "law",
+            "neutrality"
+          ],
+          "armor_class": "<int>",
+          "class": [
+            "cleric",
+            "fighting_man",
+            "magic_user"
+          ],
+          "equipment": [],
+          "experience_points": "<int>",
+          "gold": "<int>",
+          "hit_dice": "<int>",
+          "hit_points": "<int>",
+          "language": {
+            "language_limit": "<int>",
+            "language_list": [
+              "alignment_language",
+              "common_tongue",
+              "creature_languages"
+            ]
+          },
+          "movement_rate": "<int>",
+          "race": [
+            "dwarf",
+            "elf",
+            "halfling",
+            "human"
+          ]
+        }
+      }
+    }
+  },
   "objects": [],
   "locations": [],
   "resolution": [],
