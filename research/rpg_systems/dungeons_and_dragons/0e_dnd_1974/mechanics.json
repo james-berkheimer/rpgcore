@@ -1,109 +1,203 @@
 {
   "entities": {
+    "entity": {
+      "alignment": ["law", "neutrality", "chaos"],
+      "armor_class": "<int>",
+      "hit_dice": "<int>",
+      "hit_points": "<int>",
+      "movement_rate": "<int>"
+    },
+
     "character": {
-      "type": {
-        "monster": {
-          "armor_class": "<int>",
-          "attack_type": ["<string>"],
-          "hit_dice": "<int>",
-          "in_lair": "<boolean | percentage>",
-          "intelligence": "<category>",
-          "monster_type": "<string>",
-          "moves_in_inches": ["<walk_int>,<fly_int>"],
-          "number_appearing": "<int>",
-          "special_abilities": ["<string>"],
-          "treasure_type": ["<A-I>"]
-        },
-        "non_player_character": {
-          "abilities": [
-            "constitution",
-            "dexterity",
-            "intelligence",
-            "strength",
-            "wisdom",
-            "charisma"
-          ],
-          "alignment": [
-            "chaos",
-            "law",
-            "neutrality"
-          ],
-          "armor_class": "<int>",
-          "class": [
-            "cleric",
-            "fighting_man",
-            "magic_user"
-          ],
-          "equipment": [],
-          "experience_points": "<int>",
-          "gold": "<int>",
-          "hit_dice": "<int>",
-          "hit_points": "<int>",
-          "language": {
-            "language_limit": "<int>",
-            "language_list": [
-              "alignment_language",
-              "common_tongue",
-              "creature_languages"
-            ]
-          },
-          "loyalty": "<int>",
-          "morale": "<int>",
-          "movement_rate": "<int>",
-          "race": [
-            "dwarf",
-            "elf",
-            "halfling",
-            "human"
-          ],
-          "saving_throws": "<int | table-ref>"
-        },
-        "player_character": {
-          "abilities": [
-            "constitution",
-            "dexterity",
-            "intelligence",
-            "strength",
-            "wisdom",
-            "charisma"
-          ],
-          "alignment": [
-            "chaos",
-            "law",
-            "neutrality"
-          ],
-          "armor_class": "<int>",
-          "class": [
-            "cleric",
-            "fighting_man",
-            "magic_user"
-          ],
-          "equipment": [],
-          "experience_points": "<int>",
-          "gold": "<int>",
-          "hit_dice": "<int>",
-          "hit_points": "<int>",
-          "language": {
-            "language_limit": "<int>",
-            "language_list": [
-              "alignment_language",
-              "common_tongue",
-              "creature_languages"
-            ]
-          },
-          "movement_rate": "<int>",
-          "race": [
-            "dwarf",
-            "elf",
-            "halfling",
-            "human"
-          ]
-        }
-      }
+      "inherits": "entity",
+      "abilities": [
+        "strength",
+        "intelligence",
+        "wisdom",
+        "constitution",
+        "dexterity",
+        "charisma"
+      ],
+      "class": [
+        "fighting_man",
+        "magic_user",
+        "cleric"
+      ],
+      "race": [
+        "human",
+        "elf",
+        "dwarf",
+        "halfling"
+      ],
+      "language": {
+        "language_limit": "<int>",
+        "language_list": ["<string>"]
+      },
+      "saving_throws": "<int | table-ref>",
+      "experience_points": "<int>",
+      "gold": "<int>",
+      "equipment": ["<object-ref>"]
+    },
+
+    "player_character": {
+      "inherits": "character"
+    },
+
+    "non_player_character": {
+      "inherits": "character",
+      "loyalty": "<int>",
+      "morale": "<int>"
+    },
+
+    "monster": {
+      "inherits": "entity",
+      "monster_type": "<string>",
+      "intelligence": "<category>",
+      "attack_type": ["<string>"],
+      "special_abilities": ["<string>"],
+      "number_appearing": "<int>",
+      "moves_in_inches": ["<walk_int>,<fly_int>"],
+      "in_lair": "<boolean | percentage>",
+      "treasure_type": ["<A-I>"]
     }
   },
-  "objects": [],
+
+  "objects": {
+    "object": {
+      "amount": "<int>",
+      "encumbrance": "<int>",
+      "material": "<string>",
+      "value": "<int | null>"
+    },
+    "equipment": {
+      "inherits": "object"
+    },
+
+    "weapon": {
+      "inherits": "equipment",
+      "weapon_type": "<string>",
+      "damage": "<int | table-ref>",
+      "range": "<int>",
+      "attack_mode": ["melee", "missile"],
+      "two_handed": "<boolean>"
+    },
+
+    "armor": {
+      "inherits": "equipment",
+      "armor_class": "<int>",
+      "armor_type": [
+        "leather",
+        "chain",
+        "plate",
+        "shield"
+      ]
+    },
+
+    "gear": {
+      "inherits": "equipment",
+      "items": [
+        "torch",
+        "lantern",
+        "oil_flask",
+        "rope",
+        "iron_spike",
+        "hammer",
+        "pole",
+        "mirror",
+        "cross",
+        "holy_water",
+        "wolvesbane",
+        "belladonna",
+        "garlic",
+        "wine",
+        "iron_rations",
+        "standard_rations"
+      ]
+    },
+
+    "treasure": {
+      "inherits": "object"
+    },
+
+    "coinage": {
+      "inherits": "treasure",
+      "currency_type": [
+        "copper",
+        "silver",
+        "gold",
+        "electrum",
+        "platinum"
+      ],
+      "value": "<int>"
+    },
+
+    "valuables": {
+      "inherits": "treasure",
+      "category": [
+        "gems",
+        "jewelry"
+      ],
+      "value": "<int | table-ref | null>"
+    },
+
+    "magic_item": {
+      "inherits": "object",
+      "magic_bonus": "<int | null>",
+      "detection": "<boolean | null>",
+      "value": "<null>"
+    },
+
+    "magic_weapon": {
+      "inherits": ["weapon", "magic_item"],
+      "name": "<string>"
+    },
+
+    "magic_armor": {
+      "inherits": ["armor", "magic_item"],
+      "name": "<string>"
+    },
+
+    "consumable": {
+      "inherits": "magic_item",
+      "charges": "<int>"
+    },
+
+    "potion": {
+      "inherits": "consumable",
+      "name": "<string>"
+    },
+
+    "scroll": {
+      "inherits": "consumable",
+      "name": "<string>"
+    },
+
+    "staves_wands": {
+      "inherits": "consumable",
+      "name": "<string>"
+    },
+
+    "container": {
+      "inherits": "object",
+      "capacity": "<int>",
+      "name": "<string>"
+    },
+
+    "transport": {
+      "inherits": "object",
+      "movement_modifier": "<int>",
+      "name": "<string>"
+    },
+
+    "special_object": {
+      "inherits": "object",
+      "name": "<string>"
+    }
+  },
+
   "locations": [],
-  "resolution": [],
+  "rules": [],
   "unknown": []
 }
+
+
