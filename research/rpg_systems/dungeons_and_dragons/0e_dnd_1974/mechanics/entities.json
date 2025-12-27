@@ -1,0 +1,52 @@
+{
+  "entities":{
+    "character": {
+      "ability_scores": {
+        "strength": "<strength_object>",
+        "intelligence": "<intelligence_object>",
+        "wisdom": "<wisdom_object>",
+        "constitution": "<constitution_object>",
+        "dexterity": "<dexterity_object>",
+        "charisma": "<charisma_object>"
+      },
+      "alignment": "<alignment_object>",
+      "armor_class": "<int>",
+      "class": "<class_object>",
+      "encumbrance_limit": "<int>",
+      "equipment": "[<list_of_equipment_objects>]",
+      "experience_points": "<int>",
+      "hit_points": "<int>",
+      "languages_known": "[<language_list>]",
+      "level": "<int>",
+      "magic_items": "[<list_of_magic_item_objects>]",
+      "movement_rate": "<int>",
+      "next_level_experience": "<int>",
+      "race": "<race_object>",
+      "spells_known": "[<list_of_spell_objects>]",
+      "treasure": "[<list_of_treasure_objects>]"
+    },
+    "non_player_character": {
+      "inherits": "character",
+      "loyalty": "<int>",
+      "morale": "<int>"
+    },
+    "monster": {
+      "alignment": "<alignment_object>",
+      "armor_class": "<int>",
+      "attacks": "<table_ref>",
+      "description": {
+        "flavor_text": "<string>",
+        "behavior_notes": ["<string>"],
+        "referee_notes": ["<string>"]
+      },
+      "hit_dice": "<int | table_ref>",
+      "intelligence": "<category>",
+      "morale": "<int | table_ref>",
+      "movement": "<int | table_ref>",
+      "name": "<string>",
+      "special_abilities": ["<string>"],
+      "type": "<category>",
+      "treasure_type": "<table_ref>"
+    }
+  }
+}
