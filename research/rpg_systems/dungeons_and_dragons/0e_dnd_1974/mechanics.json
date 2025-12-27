@@ -1,67 +1,54 @@
 {
-  "entities": {
-    "entity": {
-      "alignment": ["law", "neutrality", "chaos"],
-      "armor_class": "<int>",
-      "hit_dice": "<int>",
-      "hit_points": "<int>",
-      "movement_rate": "<int>"
-    },
-
+  "entities":{
     "character": {
-      "inherits": "entity",
-      "abilities": [
-        "strength",
-        "intelligence",
-        "wisdom",
-        "constitution",
-        "dexterity",
-        "charisma"
-      ],
-      "class": [
-        "fighting_man",
-        "magic_user",
-        "cleric"
-      ],
-      "race": [
-        "human",
-        "elf",
-        "dwarf",
-        "halfling"
-      ],
-      "language": {
-        "language_limit": "<int>",
-        "language_list": ["<string>"]
+      "ability_scores": {
+        "stregth": "<strength_object>",
+        "intelligence": "<intelligence_object>",
+        "wisdom": "<wisdom_object>",
+        "constitution": "<constitution_object>",
+        "dexterity": "<dexterity_object>",
+        "charisma": "<charisma_object>"
       },
-      "saving_throws": "<int | table-ref>",
+      "alignment": "<alignment_object>",
+      "armor_class": "<int>",
+      "class": "<class_object>",
+      "encumbrance_limit": "<int>",
+      "equipment": "[<list_of_equipment_objects>]",
       "experience_points": "<int>",
-      "gold": "<int>",
-      "equipment": ["<object-ref>"]
+      "hit_points": "<int>",
+      "languages_known": "[<language_list>]",
+      "level": "<int>",
+      "magic_items": "[<list_of_magic_item_objects>]",
+      "movement_rate": "<int>",
+      "next_level_experience": "<int>",
+      "race": "<race_object>",
+      "spells_known": "[<list_of_spell_objects>]",
+      "treasure": "[<list_of_treasure_objects>]"
     },
-
-    "player_character": {
-      "inherits": "character"
-    },
-
     "non_player_character": {
       "inherits": "character",
       "loyalty": "<int>",
       "morale": "<int>"
     },
-
     "monster": {
-      "inherits": "entity",
-      "monster_type": "<string>",
+      "alignment": "<alignment_object>",
+      "armor_class": "<int>",
+      "attacks": "<table_ref>",
+      "description": {
+        "flavor_text": "<string>",
+        "behavior_notes": ["<string>"],
+        "referee_notes": ["<string>"]
+      },
+      "hit_dice": "<int | table_ref>",
       "intelligence": "<category>",
-      "attack_type": ["<string>"],
+      "morale": "<int | table_ref>",
+      "movement": "<int | table_ref>",
+      "name": "<string>",
       "special_abilities": ["<string>"],
-      "number_appearing": "<int>",
-      "moves_in_inches": ["<walk_int>,<fly_int>"],
-      "in_lair": "<boolean | percentage>",
-      "treasure_type": ["<A-I>"]
+      "type": "<category>",
+      "treasure_type": "<table_ref>"
     }
   },
-
   "objects": {
     "object": {
       "amount": "<int>",
@@ -121,30 +108,28 @@
 
     "coinage": {
       "inherits": "treasure",
-      "currency_type": [
-        "copper",
-        "silver",
-        "gold",
-        "electrum",
-        "platinum"
-      ],
-      "value": "<int>"
+      "type": {
+        "copper":"<int>",
+        "silver":"<int>",
+        "gold":"<int>",
+        "electrum":"<int>",
+        "platinum":"<int>"
+      }
     },
 
     "valuables": {
       "inherits": "treasure",
-      "category": [
-        "gems",
-        "jewelry"
-      ],
-      "value": "<int | table-ref | null>"
+      "type": {
+        "gems":"<int>",
+        "jewelry":"<int>"
+      }
     },
 
     "magic_item": {
       "inherits": "object",
       "magic_bonus": "<int | null>",
       "detection": "<boolean | null>",
-      "value": "<null>"
+      "name": "<string>"
     },
 
     "magic_weapon": {
@@ -199,5 +184,4 @@
   "rules": [],
   "unknown": []
 }
-
 
